@@ -1,0 +1,70 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.vite/deps_*
+
+# Dependency directories
+node_modules/
+.pnp/
+.pnp.js
+
+# dotenv environment variables
+.env
+.env.*.local
+
+# Build outputs
+dist/
+build/
+out/
+
+# VS Code settings
+.vscode/
+
+# Mac system files
+.DS_Store
+
+# Optional npm cache directory
+.npm/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Debug folders
+coverage/
+nyc_output/
+
+# IDEs
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs for pm2
+pids
+*.pid
+*.seed
+
+# Local databases
+*.sqlite
+*.db
+
+# JetBrains Rider
+.idea/
+
+# Test output
+test-output/
+
+# Next.js
+.next/
+out/
+
+# React Native
+.expo/
+.expo-shared/
+
+# Others
+*.tgz
+*.bak
