@@ -10,15 +10,7 @@ import { fileURLToPath } from "url";
 dotenv.config();
 
 const app = express();
-app.use(
-  cors({
-    origin: [
-      "https://url-shortener-frontend-chi-seven.vercel.app/", // production frontend
-      "http://localhost:5173", // local dev
-    ],
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
@@ -90,6 +82,7 @@ app.get(/^\/([a-zA-Z0-9_-]{5,15})$/, async (req, res) => {
 
   return res.redirect(urlDoc.longUrl);
 });
+
 
 // Admin middleware (simple header-based auth for demo)
 const adminAuth = (req, res, next) => {
