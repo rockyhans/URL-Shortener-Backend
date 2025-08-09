@@ -69,8 +69,8 @@ app.post("/api/shorten", async (req, res) => {
 });
 
 // Redirect route GET /:shortcode
-app.get("/:shortcode", async (req, res) => {
-  const { shortcode } = req.params;
+app.get(/^\/([a-zA-Z0-9_-]{5,15})$/, async (req, res) => {
+  const shortcode = req.params[0];
   const urlDoc = await Url.findOne({ shortCode: shortcode });
   if (!urlDoc) {
     return res.status(404).send("Short URL not found");
@@ -82,6 +82,7 @@ app.get("/:shortcode", async (req, res) => {
 
   return res.redirect(urlDoc.longUrl);
 });
+
 
 // Admin middleware (simple header-based auth for demo)
 const adminAuth = (req, res, next) => {
@@ -108,8 +109,11 @@ app.delete("/api/admin/urls/:shortcode", adminAuth, async (req, res) => {
 // Serve client in production
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/dist")));
+
+  // React frontend catch-all (after shortcode route)
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../client/dist/index.html"));
   });
