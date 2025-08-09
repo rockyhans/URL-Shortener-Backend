@@ -3,6 +3,8 @@
 This is the **backend API** for a MERN stack URL shortener application.  
 It is built using **Node.js, Express, and MongoDB** and provides endpoints to shorten URLs, redirect users, and manage URLs (admin only).
 
+## 📎 Frontend Repo URL - https://github.com/rockyhans/URL-Shortener-Frontend
+
 ---
 
 ## 🚀 Features
@@ -48,7 +50,9 @@ MONGO_URI=mongodb://127.0.0.1:27017/urlshortener
 BASE_URL=http://localhost:5000
 ADMIN_PASSWORD=your-admin-password
 ```
-📦 Installation & Setup
+---
+
+## 📦 Installation & Setup
 Clone the repository:
 
 ```
@@ -67,7 +71,9 @@ Start the server (development mode):
 node index.js
 ```
 
-🔗 API Endpoints
+---
+
+## 🔗 API Endpoints
 
 1️⃣ Shorten a URL
 POST /api/shorten
@@ -99,7 +105,9 @@ GET /api/admin/urls
 4️⃣ Admin – Delete a URL
 DELETE /api/admin/urls/:shortcode
 
-👤 Contributors
+---
+
+👤 Contributor
 <table> <tr> <td align="center"> <img src="https://avatars.githubusercontent.com/u/164065390?v=4" width="80px;" alt="Danish Rizwan"/> <br /><sub><b>Danish Rizwan</b></sub><br /> <sub>Full-Stack Developer</sub> </td> </tr> </table>
 📬 Contact
 <br>
