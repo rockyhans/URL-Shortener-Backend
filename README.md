@@ -3,7 +3,9 @@
 This is the **backend API** for a MERN stack URL shortener application.  
 It is built using **Node.js, Express, and MongoDB** and provides endpoints to shorten URLs, redirect users, and manage URLs (admin only).
 
-## 📎 Frontend Repo URL - https://github.com/rockyhans/URL-Shortener-Frontend
+<p align="center">
+<b>Frontend Repository URL - https://github.com/rockyhans/URL-Shortener-Frontend</b>
+</p>
 
 ---
 
@@ -32,11 +34,13 @@ It is built using **Node.js, Express, and MongoDB** and provides endpoints to sh
 ---
 
 ## 📂 Project Structure
+```
 backend/
 │
 ├── models/ # Mongoose models
 ├── server.js # Main entry point & Express route handlers
 └── package.json
+```
 
 ---
 
